@@ -4,7 +4,7 @@ scroll-reveal.js just adds a observer layer over the awesome [cbpScroller.js](ht
 
 It also gives some options, like whether or not reveal events must recur, or the classNames used to change the elements state.
 
-```html
+```javascript
 // Your can start the constructor with a new object
 var scoller = new ScrollReveal(wrapperEl, options);
 

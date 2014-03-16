@@ -1,0 +1,78 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>tween hack</title>
+        <meta name="description" content="">
+
+    </head>
+    <style type="text/css">
+        html{color:#000;background:#FFF;}
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+
+        .container {
+            padding: 0;
+        }
+
+        li {
+            height: 1400px;
+            line-height: 1400px;
+            text-align: center;
+        }
+
+        img {
+            vertical-align: middle;
+            opacity: 0;
+            -webkit-transition: opacity .6s;
+            -moz-transition: opacity .6s;
+            -ms-transition: opacity .6s;
+            -o-transition: opacity .6s;
+            transition: opacity .6s;
+        }
+
+        img.scroll-animate {
+            opacity: 1;
+        }
+
+    </style>
+    <body>
+
+        <ul class="container">
+            
+            <li><img class="scroll-section" src="http://placekitten.com/200/200"></li>
+
+            <li><img class="scroll-section" src="http://placekitten.com/400/300"></li>
+
+            <li><img class="scroll-section" src="http://placekitten.com/75/75"></li>
+
+            <li><img class="scroll-section" src="http://placekitten.com/400/400"></li>
+        </ul>
+
+        <script src="scripts/classie.js"></script>
+        <script src="scroll-reveal.js"></script>
+        <script>
+            var bgcInterval;
+            function randomColor() {
+                var c = 6, color = '#';
+                while(c--) {
+                    color += Math.floor(Math.random() * 16).toString(16);
+                }
+                return color;
+            }
+
+            ScrollReveal({
+                /* options */    
+            }).on('reveal', function(el) {
+                bgcInterval = window.setInterval(function() {
+                    document.body.style.backgroundColor = randomColor();
+                }, 100)
+            }).on('hide', function(el) {
+                document.body.style.backgroundColor = '#ffffff';
+                window.clearInterval(bgcInterval);
+            });
+        </script>
+</body>
+</html>

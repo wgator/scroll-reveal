@@ -2,7 +2,7 @@
 
 scroll-reveal.js just adds a observer layer over the awesome [cbpScroller.js](http://tympanus.net/codrops/2013/07/18/on-scroll-effect-layout/) by [Mary Lou](https://twitter.com/crnacura) (Copyright © 2014 [Codrops](http://tympanus.net/codrops/)), so you can listen do `reveal` and `hide` events, and handle the animations yourself (rather than relying on HTML class changes and CSS animations).
 
-It also gives some options, like whether or not reveal events must recur, or the classNames user to change the elements state.
+It also gives some options, like whether or not reveal events must recur, or the classNames used to change the elements state.
 
 ```html
 // Your can start the constructor with a new object
